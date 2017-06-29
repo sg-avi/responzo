@@ -29,8 +29,8 @@ mdl.config(['$compileProvider', (compileProvider: ng.ICompileProvider) => {
 }]);
 
 mdl.config([
-	'$stateProvider', '$locationProvider', '$urlRouterProvider',
-	(stateProvider: angular.ui.IStateProvider, locationProvider: ng.ILocationProvider, urlRouterProvider: ng.ui.IUrlRouterProvider) => {
+	'$stateProvider', '$locationProvider',
+	(stateProvider: angular.ui.IStateProvider, locationProvider: ng.ILocationProvider) => {
 
 		locationProvider.html5Mode(true);
 
@@ -63,13 +63,5 @@ mdl.config([
 		})
 	}
 ]);
-
-mdl.run(['$mdMedia', '$state', (mdMedia: ng.material.IMedia, state: ng.ui.IStateService) => {
-		if (mdMedia('xs') || mdMedia('sm') || mdMedia('md')) {
-			state.transitionTo('mobileContent');
-		} else {
-			state.transitionTo('desktopContent');
-		}
-}]);
 
 mdl.constant('config', require('config'));
