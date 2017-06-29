@@ -5,7 +5,6 @@ import {MobileContentComponent} from "components/content/mobile/contentComponent
 import {EntryDescriptionComponent} from "components/entry-description/entryDescriptionComponent";
 import {EntriesService} from "services/entriesService";
 import {LeftController} from "components/main/leftController";
-import {RightController} from "components/main/rightController";
 import 'angular-material/angular-material.min.css';
 import "ionicons/dist/css/ionicons.css";
 
@@ -19,7 +18,6 @@ mdl.component('mobileContent', MobileContentComponent());
 mdl.component('entryDescriptionComponent', EntryDescriptionComponent());
 
 mdl.controller('leftController', LeftController);
-mdl.controller('rightController', RightController);
 
 mdl.service(EntriesService.SERVICE_NAME, EntriesService);
 
