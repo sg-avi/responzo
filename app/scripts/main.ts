@@ -9,6 +9,8 @@ import {RightController} from "components/main/rightController";
 import 'angular-material/angular-material.min.css';
 import "ionicons/dist/css/ionicons.css";
 
+import "./state-animation.less";
+
 var mdl: ng.IModule = angular.module('SampleApp', [require("angular-ui-router").default, require("angular-material")]);
 
 mdl.component('mainComponent', MainComponent());
