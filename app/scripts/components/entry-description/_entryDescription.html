@@ -1,0 +1,20 @@
+<md-content flex class="content">
+	<div layout="row">
+		<div layout="column" class="item-description" flex>
+			<div flex="5" hide-gt-md><a ui-sref="mobileContent">&lt;Back to list</a> </div>
+			<md-content class="item-details">
+				<img ng-src="{{$ctrl.entry.photo}}" class="entry-photo" class="md-avatar"
+					 alt="{{$ctrl.entry.name}}"/>
+				<div class="md-list-item-text" layout="column">
+					<h3 class="entry-name">{{$ctrl.entry.name}}</h3>
+					<h4 class="entry-race">{{$ctrl.entry.race}}</h4>
+					<p class="entry-tribe">{{$ctrl.entry.tribe}}</p>
+					<p class="entry-role">{{$ctrl.entry.role}}</p>
+					<p class="entry-description">{{$ctrl.entry.description}}</p>
+					<p class="entry-dob"> Date of birth: {{$ctrl.entry.dob}}</p>
+					<p class="entry-dod"> Date of death: {{$ctrl.entry.dod}}</p>
+				</div>
+			</md-content>
+		</div>
+	</div>
+</md-content>

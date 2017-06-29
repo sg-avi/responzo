@@ -1,0 +1,28 @@
+<md-content flex>
+	<div layout="column" layout-align="start start" class="sg-nav">
+		<div>
+			<md-button ng-click="$ctrl.toggleLeft()"
+					   class="md-primary">
+				<i class="icon ion-md-menu"></i>
+			</md-button>
+		</div>
+	</div>
+	<md-content flex class="content">
+		<div layout="row" ng-init="$ctrl.selected = $ctrl.listOfEntries[0]">
+			<div layout="column" class="list-of-entries" flex="15">
+				<md-list>
+					<md-list-item ng-repeat="entry in $ctrl.listOfEntries" class="md-3-line entry-item"
+								  ng-click="$ctrl.selected = $ctrl.listOfEntries[$index]">
+						<img ng-src="{{::entry.photo}}" class="md-avatar" alt="{{::entry.name}}"/>
+						<div class="md-list-item-text" layout="column">
+							<h3>{{::entry.name}}</h3>
+							<h4>{{::entry.race}}</h4>
+							<p>{{::entry.tribe}}</p>
+						</div>
+					</md-list-item>
+				</md-list>
+			</div>
+			<entry-description-component entry="$ctrl.selected"></entry-description-component>
+		</div>
+	</md-content>
+</md-content>

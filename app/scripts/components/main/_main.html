@@ -1,0 +1,25 @@
+<div layout="column" ng-cloak class="main-page">
+
+	<section layout="row" flex>
+
+		<md-sidenav
+				class="md-sidenav-left"
+				md-component-id="left"
+				md-whiteframe="4">
+
+			<md-toolbar class="md-theme-indigo">
+				<h1 class="md-toolbar-tools">Sidenav Left</h1>
+			</md-toolbar>
+			<md-content layout-padding ng-controller="leftController as $ctrl">
+				<md-list>
+					<md-list-item class="md-1-line" ng-click="null" ng-repeat="app in $ctrl.applicationList">{{app}}
+					</md-list-item>
+				</md-list>
+			</md-content>
+
+		</md-sidenav>
+
+		<div flex ui-view></div>
+
+	</section>
+</div>
