@@ -1,7 +1,7 @@
 <md-content flex class="content">
 	<div layout="row">
 		<div layout="column" class="item-description" flex>
-			<div flex="5" hide-gt-md><a ui-sref="mobileContent">&lt;Back to list</a> </div>
+			<div flex="5" hide-gt-md><a onclick="history.back()">&lt;Back to list</a> </div>
 			<md-content class="item-details">
 				<img ng-src="{{$ctrl.entry.photo}}" class="entry-photo" class="md-avatar"
 					 alt="{{$ctrl.entry.name}}"/>

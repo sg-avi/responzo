@@ -1,7 +1,11 @@
 {
 	"compilerOptions": {
 		"baseUrl": ".",
-		"module": "es6",
+		"module": "es2015",
+		"lib": [
+			"es2016",
+			"dom"
+		],
 		"noImplicitAny": true,
 		"removeComments": true,
 		"strictNullChecks": true,
@@ -11,6 +15,10 @@
 		"paths": {
 			"services": [
 				"app/scripts/services/*"
+			],
+			"states": [
+				"app/scripts/states/*",
+				"app/scripts/states/index"
 			]
 		}
 	},
